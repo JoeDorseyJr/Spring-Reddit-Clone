@@ -1,5 +1,7 @@
 package com.example.redditClone.model;
 
+import com.example.redditClone.exceptions.SpringRedditException;
+
 import java.util.Arrays;
 
 public enum VoteType {
@@ -10,12 +12,12 @@ public enum VoteType {
     VoteType(int direction){
     }
 
-    public static VoteType lookup(Integer direction){
-//        return Arrays.stream(VoteType.values())
-//                .filter(value -> value.getDirection().equals(direction))
-//                .findAny()
-//                .orElseThrow(()-> new SpringRedditException("Vote not found."));
-    return null;
+    public static VoteType lookup(Integer direction) {
+        return Arrays.stream(VoteType.values())
+                .filter(value -> value.getDirection().equals(direction))
+                .findAny()
+                .orElseThrow(()-> new SpringRedditException("Vote not found."));
+
     }
 
     public Integer getDirection(){
