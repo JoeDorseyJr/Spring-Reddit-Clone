@@ -11,10 +11,11 @@ public enum VoteType {
     }
 
     public static VoteType lookup(Integer direction){
-        return Arrays.stream(VoteType.values())
-                .filter(value -> value.getDirection().equals(direction))
-                .findAny()
-                .orElseThrow(()-> new SpringRedditException("Vote not found."));
+//        return Arrays.stream(VoteType.values())
+//                .filter(value -> value.getDirection().equals(direction))
+//                .findAny()
+//                .orElseThrow(()-> new SpringRedditException("Vote not found."));
+    return null;
     }
 
     public Integer getDirection(){
